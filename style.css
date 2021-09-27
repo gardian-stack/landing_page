@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bonheur+Royale&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(2, 0, 36, 0.7) 0%, rgba(164, 154, 99, 0.7) 0%, rgba(204, 193, 115, 0.7) 10%, rgba(204, 193, 115, 0.7) 23%, rgba(251, 192, 26, 0.7) 100%), url('./background.jpg');
+    background-size: cover;
+    z-index: -1;
+}
+
+body {
+    font-family: Bebas Neue, sans-serif;
+}
+
+#btn,
+#close {
+    font-size: 30px;
+    line-height: 80px;
+    float: right;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+#pricing {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(100% / 3);
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 30px;
+}
+
+.product>.level {
+    background-color: #ddd;
+    color: black;
+    padding: 15px 0;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 28px 28px 0px 0px;
+}
+
+.product>h2 {
+    margin-top: 15px;
+}
+
+.product>ol {
+    margin: 15px 0;
+}
+
+.product>ol>li {
+    padding: 5px 0;
+}
+
+.product>button {
+    margin-bottom: 15px;
+}
+
+@media(max-width: 600px) {
+
+    #pricing {
+        display: block;
+    }
+
+    #product {
+        width: 95%;
+    }
+
+    #nav-bar {
+        margin-right: -17%;
+    }
+
+    label #btn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 35vh;
+        margin-right: 0;
+        top: 80px;
+        right: -100%;
+        background-color: rgba(184, 181, 167, 1);
+        /* text-align: center; */
+        transition: .5s;
+    }
+
+    ul li {
+        display: block;
+        height: 0;
+        margin: 50px 6%;
+    }
+
+    #check:checked~ul {
+        right: 0;
+    }
+
+    #form {
+        margin-top: 37%;
+    }
+
+    #how-it-works {
+        text-align: center;
+        margin-top: 20%;
+    }
+
+    header img {
+        max-width: 300px;
+        max-height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: -36%;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        min-height: 75px;
+        padding: 0px 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #eee;
+        opacity: 1;
+    }
+
+}
+
+@media (min-width: 600px) {
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        min-height: 75px;
+        padding: 0px 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #eee;
+        opacity: 1;
+    }
+
+    .logo {
+        width: 60vw;
+    }
+
+    header img {
+        max-width: 300px;
+        max-height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: 40px;
+    }
+
+
+
+    #form-claim input {
+        margin: 10px;
+        width: 300px;
+        height: 35px;
+        border-radius: 5px;
+        padding: 6px;
+    }
+
+    nav>ul {
+        width: 35vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav {
+        font-weight: 400;
+    }
+
+    #how-it-works {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    #how-it-works iframe {
+        width: 853px;
+        height: 480px;
+    }
+
+}
+
+#form-claim {
+    margin-top: 100px;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+
+button {
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+    background-color: #fdbb2d;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    font-family: inherit;
+}
